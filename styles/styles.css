@@ -13,10 +13,11 @@
 :root {
   --yellow: #ffcb05;
   --red: #f15d53;
-  --teal: #505050;
+  --teal: #81bcb6;
+  --black: #231f20;
   --text-color: #424242;
   --link-color: var(--text-color);
-  --link-hover-color: #1d3ecf;
+  --link-hover-color: var(--text-color);
   --body-font-family: "Montserrat", "Montserrat Fallback", "sans-serif";
   --heading-font-family: "Aleo", "Aleo Fallback", "serif";
   --body-font-size-m: 18px;
@@ -33,6 +34,12 @@
   --nav-height: 64px;
   --page-width: 1200px;
 }
+
+/* theme colors */
+.block { --theme-clr-background: #fff; --theme-clr-text: var(--text-color) }
+.yellow { --theme-clr-background: var(--yellow); --theme-clr-text: var(--text-color) }
+.teal { --theme-clr-background: var(--teal); --theme-clr-text: var(--text-color) }
+.red { --theme-clr-background: var(--red); --theme-clr-text: var(--text-color) }
 
 /* fallback fonts */
 @font-face {

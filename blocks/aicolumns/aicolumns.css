@@ -1,6 +1,7 @@
 
 .aicolumns-wrapper {
-  background: var(--yellow);
+  background: var(--theme-clr-background);
+  color: var(--theme-clr-text);
 }
 
 .aicolumns {
@@ -14,7 +15,7 @@
   }
 
   h1 {
-    color: #000;
+    color: var(--black);
     margin: 0;
   }
 

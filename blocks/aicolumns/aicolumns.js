@@ -1,5 +1,10 @@
 export default function decorate(block) {
   const cols = [...block.firstElementChild.children];
+  const variantClass = block.className
+    .replace('block', '')
+    .replace('aicolumns', '')
+    .trim();
+  block.parentElement.classList.add(variantClass);
   block.classList.add(`aicolumns-${cols.length}-cols`);
 
   // setup image aicolumns
