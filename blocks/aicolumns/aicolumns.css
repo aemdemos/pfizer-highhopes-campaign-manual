@@ -1,0 +1,25 @@
+
+.aicolumns-wrapper {
+  background: var(--yellow);
+}
+
+.aicolumns {
+  display: flex;
+
+  > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h1 {
+    color: #000;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
