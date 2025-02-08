@@ -12,6 +12,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    .cols-2 & > div { width: 50% }
+    .cols-3 & > div { width: 33.3% }
+    .cols-4 & > div { width: 25% }
   }
 
   h1 {

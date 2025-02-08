@@ -5,7 +5,7 @@ export default function decorate(block) {
     .replace('aicolumns', '')
     .trim();
   block.parentElement.classList.add(variantClass);
-  block.classList.add(`aicolumns-${cols.length}-cols`);
+  block.classList.add(`cols-${cols.length}`);
 
   // setup image aicolumns
   [...block.children].forEach((row) => {
