@@ -10,11 +10,16 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
+
+/* stylelint-disable declaration-block-single-line-max-declarations, no-descending-specificity */
+
 :root {
   --yellow: #ffcb05;
   --red: #f15d53;
   --teal: #81bcb6;
+  --blue: #0000C9;
   --black: #231f20;
+  --background: #ececec;
   --text-color: #424242;
   --link-color: var(--text-color);
   --link-hover-color: var(--text-color);
@@ -31,8 +36,8 @@
   --heading-font-size-xs: 12.06px;
 
   /* sizes */
-  --nav-height: 64px;
-  --page-width: 1200px;
+  --nav-height: 108px;
+  --page-width: 1264px;
 }
 
 /* theme colors */
@@ -210,9 +215,15 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   display: none;
-  margin: 0;
+  background: var(--background);
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
@@ -306,7 +317,6 @@ a:hover {
 
 /* buttons */
 a.button:any-link, button {
-  box-sizing: border-box;
   display: inline-block;
   max-width: 100%;
   margin: 12px 0;
@@ -359,15 +369,16 @@ main img {
 }
 
 /* sections */
-main>.section {
-  margin: 40px 0;
+main > .section {
+  margin: 0;
 }
 
 
 /* center align all blocks by default */
 div[class*="-wrapper"] > div {
   margin: auto;
-  width: var(--page-width);
+  max-width: var(--page-width);
+
 
   > div {
     width: 100%;
