@@ -26,7 +26,7 @@
   --body-font-family: "Montserrat", "Montserrat Fallback", "sans-serif";
   --heading-font-family: "Aleo", "Aleo Fallback", "serif";
   --body-font-size-m: 18px;
-  --body-font-size-s: 14.94px;
+  --body-font-size-s: 14px;
   --body-font-size-xs: 12.06px;
   --heading-font-size-xxl: 44px;
   --heading-font-size-xl: 32px;
@@ -41,7 +41,7 @@
 }
 
 /* theme colors */
-.block { --theme-clr-background: #fff; --theme-clr-text: var(--text-color) }
+.block { --theme-clr-background: var(--background); --theme-clr-text: var(--text-color) }
 .yellow { --theme-clr-background: var(--yellow); --theme-clr-text: var(--text-color) }
 .teal { --theme-clr-background: var(--teal); --theme-clr-text: var(--text-color) }
 .red { --theme-clr-background: var(--red); --theme-clr-text: var(--text-color) }
@@ -304,52 +304,42 @@ input, textarea, select, button {
 }
 
 /* links */
-a:any-link {
-  color: var(--link-color);
+a {
   text-decoration: none;
-  word-break: break-word;
+  color: var(--text-color);
+
+  &:hover { text-decoration: underline; }
 }
 
-a:hover {
-  color: var(--link-hover-color);
-  text-decoration: underline;
-}
+.button-container { text-align: center }
 
 /* buttons */
-a.button:any-link, button {
-  display: inline-block;
-  max-width: 100%;
+a.button, button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 290px;
+  max-width: 330px;
+  height: 88px;
   margin: 12px 0;
-  border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
-  font-family: var(--body-font-family);
+  padding: 10px 35px;
+  font-family: Aleo, serif;
   font-style: normal;
-  font-weight: 500;
+  font-size: 22px;
+  font-weight: 700;
   line-height: 1.25;
-  text-align: center;
+  color: #fff;
   text-decoration: none;
-  background-color: var(--link-color);
   cursor: pointer;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  background: var(--red);
+  border: 5px solid var(--red);
+  border-radius: 10px;
+  letter-spacing: .25px;
+
+  &:hover, &:focus { background: var(--yellow) }
 }
 
-a.button:hover, a.button:focus, button:hover, button:focus {
-  background-color: var(--link-hover-color);
-  cursor: pointer;
-}
 
-button:disabled, button:disabled:hover {
-  cursor: unset;
-}
-
-a.button.secondary, button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color);
-}
 
 main img {
   max-width: 100%;
@@ -401,11 +391,14 @@ div[class*="-wrapper"] > div {
 
 
 /* use word table alignment to position elements */
-div[data-align], div[data-valign] { display: flex }
+div[data-align], div[data-valign] {
+  display: flex;
+  flex-direction: column;
+}
 
 /* Horizontal alignment */
 [data-align="left"] { justify-content: flex-start }
-[data-align="center"] { justify-content: center }
+[data-align="center"] { text-align: center; } /* works */
 [data-align="right"] { justify-content: flex-end }
 
 /* Vertical alignment */
