@@ -1,7 +1,7 @@
 
 .aicolumns-wrapper {
-  background: var(--theme-clr-background);
-  color: var(--theme-clr-text);
+  background: var(--theme-clr-bg);
+  color: var(--theme-clr-txt);
 }
 
 .aicolumns {

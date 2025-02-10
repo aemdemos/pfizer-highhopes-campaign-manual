@@ -18,6 +18,7 @@
   --red: #f15d53;
   --teal: #81bcb6;
   --blue: #0000C9;
+  --white: #fff;
   --black: #231f20;
   --background: #ececec;
   --text-color: #424242;
@@ -40,11 +41,36 @@
   --page-width: 1264px;
 }
 
-/* theme colors */
-.block { --theme-clr-background: var(--background); --theme-clr-text: var(--text-color) }
-.yellow { --theme-clr-background: var(--yellow); --theme-clr-text: var(--text-color) }
-.teal { --theme-clr-background: var(--teal); --theme-clr-text: var(--text-color) }
-.red { --theme-clr-background: var(--red); --theme-clr-text: var(--text-color) }
+/* theme variants */
+.default, .block {
+  --theme-clr-bg: transparent;
+  --theme-clr-txt: var(--text-color);
+  --theme-btn-bg: var(--red);
+  --theme-btn-txt: #fff;
+}
+
+.yellow {
+  --theme-clr-bg: var(--yellow);
+  --theme-clr-txt: var(--text-color);
+  --theme-btn-bg: var(--red);
+  --theme-btn-txt: #fff;
+}
+
+.teal {
+  --theme-clr-bg: var(--teal);
+  --theme-clr-txt: var(--text-color);
+  --theme-btn-bg: var(--yellow);
+  --theme-btn-txt: var(--text-color);
+}
+
+.red {
+  --theme-clr-bg: var(--red);
+  --theme-clr-txt: var(--text-color);
+}
+
+.block.pad-top > div { padding-top: 80px }
+.block.pad-bottom > div { padding-bottom: 80px }
+
 
 /* fallback fonts */
 @font-face {
@@ -223,7 +249,6 @@
 
 body {
   display: none;
-  background: var(--background);
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
@@ -307,7 +332,6 @@ input, textarea, select, button {
 a {
   text-decoration: none;
   color: var(--text-color);
-
   &:hover { text-decoration: underline; }
 }
 
@@ -328,15 +352,15 @@ a.button, button {
   font-size: 22px;
   font-weight: 700;
   line-height: 1.25;
-  color: #fff;
+  color: var(--theme-btn-txt);
   text-decoration: none;
   cursor: pointer;
-  background: var(--red);
-  border: 5px solid var(--red);
+  background: var(--theme-btn-bg);
+  border: 5px solid var(--theme-btn-bg);
   border-radius: 10px;
   letter-spacing: .25px;
-
-  &:hover, &:focus { background: var(--yellow) }
+  transition: background 140ms ease-in-out;
+  &:hover, &:focus { background: transparent }
 }
 
 

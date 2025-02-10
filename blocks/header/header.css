@@ -1,5 +1,10 @@
 /* stylelint-disable declaration-block-single-line-max-declarations, no-descending-specificity */
 header {
+  background: var(--background);
+
+    /* push header down when sidekick is present */
+    helix-sidekick ~ & { margin-top: 49px !important }
+
   nav {
     display: flex;
     justify-content: space-between;

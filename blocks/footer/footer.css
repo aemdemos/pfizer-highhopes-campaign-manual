@@ -1,9 +1,11 @@
 footer {
+  background: var(--background);
   font-size: var(--body-font-size-s);
   line-height: 30px;
   font-weight: 500;
   border-top: 8px solid #c4c4c4;
   padding: 40px 20px;
+  margin-top: 160px;
 
   @media (width < 1024px) {
     text-align: center;
@@ -27,13 +29,13 @@ footer {
   .aicolumns > div  {
     height: 100%;
     align-items: flex-start;
+    .cols-2 & > div { width: auto }
 
     @media (width < 1024px) {
       flex-direction: column;
       align-items: center;
     }
   }
-
 
   .button-container {
     p{ margin: 0 !important }
