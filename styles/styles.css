@@ -343,7 +343,7 @@ a.button, button {
   justify-content: center;
   align-items: center;
   min-width: 290px;
-  max-width: 330px;
+  max-width: 340px;
   height: 88px;
   margin: 12px 0;
   padding: 10px 35px;
@@ -361,9 +361,10 @@ a.button, button {
   letter-spacing: .25px;
   transition: background 140ms ease-in-out;
   &:hover, &:focus { background: transparent }
+
+  /* space between adjacent buttons */
+  & + & { margin-left: 20px }
 }
-
-
 
 main img {
   max-width: 100%;
@@ -387,7 +388,6 @@ main > .section {
   margin: 0;
 }
 
-
 /* center align all blocks by default */
 div[class*="-wrapper"] > div {
   margin: auto;
@@ -399,20 +399,15 @@ div[class*="-wrapper"] > div {
   }
 }
 
-
-
 @media (width>=900px) {
   main>.section>div {
     padding: 0 32px;
   }
 }
 
-
 .section.hidden {
   display: none;
 }
-
-
 
 /* use word table alignment to position elements */
 div[data-align], div[data-valign] {
@@ -421,12 +416,12 @@ div[data-align], div[data-valign] {
 }
 
 /* Horizontal alignment */
-[data-align="left"] { justify-content: flex-start }
-[data-align="center"] { text-align: center; } /* works */
-[data-align="right"] { justify-content: flex-end }
+[data-align="left"] { text-align: left }
+[data-align="center"] { text-align: center }
+[data-align="right"] { text-align: right }
 
 /* Vertical alignment */
-[data-valign="top"] { align-items: flex-start }
-[data-valign="middle"] { align-items: center }
-[data-valign="bottom"] { align-items: flex-end }
+[data-valign="top"] { align-self: flex-start }
+[data-valign="middle"] { align-self: center }
+[data-valign="bottom"] { align-self: flex-end }
 
