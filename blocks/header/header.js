@@ -107,12 +107,6 @@ export default async function decorate(block) {
   const hamburger = div({ class: 'nav-burger', 'aria-controls': 'nav', 'aria-label': 'Open navigation' }, span(), span(), span());
   hamburger.addEventListener('click', () => toggleMenu($nav, navSections));
   $nav.prepend(hamburger);
-  // $nav.setAttribute('aria-expanded', 'false');
-
-  // prevent mobile nav behavior on window resize
-  // toggleMenu($nav, navSections, isDesktop.matches);
-  // isDesktop.addEventListener('change', () => toggleMenu($nav, navSections, isDesktop.matches));
-
   const navWrapper = div({ class: 'nav-wrapper' }, $nav);
   block.append(navWrapper);
 

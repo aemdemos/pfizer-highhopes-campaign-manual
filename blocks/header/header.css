@@ -49,7 +49,7 @@ header {
             }
           }
 
-          &:hover > a, &:hover > u { border-color: var(--red) }
+          &:hover > a, &:hover > u, &:has(.active) u { border-color: var(--red) }
 
           /* dropdown menu */
           > ul {
@@ -129,9 +129,8 @@ header {
           height: 4px;
           background: var(--blue);
           border-radius: 2px;
-          transition: all 200ms ease-in-out;
           position: relative;
-          &+span { margin-top: 6px }
+          & + span { margin-top: 6px }
         }
 
         nav[aria-expanded='true'] & {
