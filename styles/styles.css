@@ -39,6 +39,18 @@
   /* sizes */
   --nav-height: 108px;
   --page-width: 1264px;
+
+  @media (width <= 1200px) {
+      --body-font-size-m: 16px;
+      --body-font-size-s: 14.94px;
+      --body-font-size-xs: 12.06px;
+      --heading-font-size-xxl: 44px;
+      --heading-font-size-xl: 24px;
+      --heading-font-size-l: 18px;
+      --heading-font-size-m: 18px;
+      --heading-font-size-s: 14.94px;
+      --heading-font-size-xs: 12.06px;
+  }
 }
 
 /* theme variants */
@@ -68,9 +80,21 @@
   --theme-clr-txt: var(--text-color);
 }
 
-.block.pad-top > div { padding-top: 80px }
-.block.pad-bottom > div { padding-bottom: 80px }
+.block.pad-top > div {
+  padding-top: 50px;
 
+  @media (width <= 1200px) {
+    padding-top: 20px;
+  }
+}
+
+.block.pad-bottom > div {
+  padding-bottom: 60px;
+
+  @media (width <= 1200px) {
+    padding-top: 20px;
+  }
+}
 
 /* fallback fonts */
 @font-face {
@@ -227,20 +251,6 @@
   size-adjust:107.89%;
 }
 
-@media (width>=900px) {
-  :root {
-    --body-font-size-m: 18px;
-    --body-font-size-s: 14.94px;
-    --body-font-size-xs: 12.06px;
-    --heading-font-size-xxl: 44px;
-    --heading-font-size-xl: 32px;
-    --heading-font-size-l: 20px;
-    --heading-font-size-m: 18px;
-    --heading-font-size-s: 14.94px;
-    --heading-font-size-xs: 12.06px;
-  }
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -273,10 +283,10 @@ header .header[data-block-status="loaded"], footer .footer[data-block-status="lo
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0.8em;
-  margin-bottom: 0.25em;
+  margin-bottom: 1em;
   font-family: var(--heading-font-family);
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 1.6em;
   scroll-margin: 40px;
 }
 
@@ -290,6 +300,7 @@ h2 {
 
 h3 {
   font-size: var(--heading-font-size-l);
+  font-family: var(--body-font-family);
 }
 
 h4 {
@@ -307,6 +318,7 @@ h6 {
 p, dl, ol, ul, pre, blockquote {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
+  font-weight: 500;
 }
 
 code, pre {
@@ -396,12 +408,7 @@ div[class*="-wrapper"] > div {
 
   > div {
     width: 100%;
-  }
-}
-
-@media (width>=900px) {
-  main>.section>div {
-    padding: 0 32px;
+    padding: 0 20px;
   }
 }
 
@@ -413,6 +420,7 @@ div[class*="-wrapper"] > div {
 div[data-align], div[data-valign] {
   display: flex;
   flex-direction: column;
+
 }
 
 /* Horizontal alignment */

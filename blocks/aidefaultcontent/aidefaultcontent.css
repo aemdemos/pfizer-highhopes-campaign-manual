@@ -4,6 +4,8 @@
 }
 
 .aidefaultcontent {
+  padding: 0 32px;
+
   ul {
     font-weight: 500;
     list-style-type: none;
