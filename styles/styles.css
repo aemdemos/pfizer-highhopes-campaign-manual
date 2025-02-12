@@ -350,7 +350,7 @@ a {
 .button-container { text-align: center }
 
 /* buttons */
-a.button, button {
+a.button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
