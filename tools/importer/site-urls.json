@@ -1,0 +1,57 @@
+{
+  "originUrl": "https://www.highhopes-campaign.co.uk/",
+  "urls": [
+    {
+      "url": "https://highhopes-campaign.co.uk/",
+      "source": "SITEMAPS"
+    },
+    {
+      "url": "https://highhopes-campaign.co.uk/symptoms-and-causes",
+      "source": "SITEMAPS"
+    },
+    {
+      "url": "https://highhopes-campaign.co.uk/terms-of-use",
+      "source": "SITEMAPS"
+    },
+    {
+      "url": "https://highhopes-campaign.co.uk/diagnosis-and-treatment",
+      "source": "SITEMAPS"
+    },
+    {
+      "url": "https://highhopes-campaign.co.uk/support-resources",
+      "source": "SITEMAPS"
+    },
+    {
+      "url": "https://highhopes-campaign.co.uk/parent-resources",
+      "source": "SITEMAPS"
+    },
+    {
+      "url": "https://highhopes-campaign.co.uk/teacher-resources",
+      "source": "SITEMAPS"
+    },
+    {
+      "url": "https://highhopes-campaign.co.uk/faqs",
+      "source": "SITEMAPS"
+    },
+    {
+      "url": "https://www.highhopes-campaign.co.uk/",
+      "source": "NAV"
+    },
+    {
+      "url": "https://www.highhopes-campaign.co.uk/symptoms-and-causes",
+      "source": "NAV"
+    },
+    {
+      "url": "https://www.highhopes-campaign.co.uk/diagnosis-and-treatment",
+      "source": "NAV"
+    },
+    {
+      "url": "https://www.highhopes-campaign.co.uk/support-resources",
+      "source": "NAV"
+    },
+    {
+      "url": "https://www.highhopes-campaign.co.uk/faqs",
+      "source": "NAV"
+    }
+  ]
+}
